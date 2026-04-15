@@ -1,0 +1,83 @@
+name: Build LaTeX-Resume and Deploy to the site GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v6
+      
+    - name: Compile LaTeX document
+      uses: xu-cheng/latex-action@v4
+      with:
+        root_file: main.tex
+        args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
+
+    - name: Create output directory
+      run: mkdir -p _site
+
+    - name: Install exiftool
+      run: sudo apt-get update && sudo apt-get install -y libimage-exiftool-perl
+
+    - name: Add PDF metadata
+      run: |
+        exiftool -overwrite_original \
+          -Title="Kritik Agarwal — CV" \
+          -Author="Kritik Agarwal" \
+          -Subject="M.Tech CSE graduate from IIT Hyderabad. Experienced in Python, data-driven systems, and cybersecurity. Seeking software engineering roles." \
+          -Keywords="Software Engineer, Python, Machine Learning, Cybersecurity, IIT Hyderabad, M.Tech CSE" \
+          -Description="Kritik Agarwal - M.Tech Computer Science and Engineering, IIT Hyderabad. Skills: Python, SQL, Git, Linux. Experience in data-driven modeling, cybersecurity, and software development." \
+          main.pdf
+
+    - name: Generate .well-known/discord
+      run: |
+        mkdir -p .well-known
+        echo "dh=${{ secrets.DISCORD_DH }}" > .well-known/discord
+
+    - name: Prepare and copy all files
+      run: |
+        set -e
+
+        mkdir -p _site/assets _site/.well-known
+
+        cp -v main.pdf _site/KritikAgarwal_CV.pdf
+        cp -v index.html _site/
+        cp -v public/styles.css _site/
+        cp -v public/robots.txt _site/
+        cp -v public/sitemap.xml _site/
+
+        cp -r public/assets/* _site/assets/
+
+        cp .well-known/discord _site/.well-known/
+          
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v5
+      with:
+        path: '_site'
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

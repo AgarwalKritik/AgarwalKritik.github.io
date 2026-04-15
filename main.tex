@@ -1,0 +1,160 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[left=0.3in, right=0.3in, top=0.4in, bottom=0.3in]{geometry}
+\usepackage[table]{xcolor}
+\usepackage{enumitem, hyperref, fontawesome5, titlesec, tabularx, xcolor, graphicx, setspace}
+\pagestyle{empty}
+\usepackage{mathptmx}
+\usepackage[T1]{fontenc}
+\setlength{\parindent}{0pt}
+\renewcommand{\arraystretch}{1.2}
+\setlist[itemize]{itemsep=1mm, topsep=0pt}
+
+\hypersetup{colorlinks=true, urlcolor=black, linkbordercolor=white}
+
+\titleformat{\section}[block]
+  {\large\bfseries\color{black}} % Font styling
+  {} % No section number
+  {0pt} % Space between label and title
+  {}
+[\vspace{3pt}\hrule height 0.6pt \vspace{2pt}]
+
+
+%----------------------------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------------------------
+% HEADER
+%----------------------------------------------------------------------------------------------------------
+
+\begin{center}
+    {\Huge \textbf{Kritik Agarwal}}\\[1mm]
+    {\small M.Tech Computer Science \& Engineering | Fresher}\\[1mm]
+    {\small \faEnvelope~\href{mailto:kritikagarwal@ymail.com}{kritikagarwal@ymail.com} \quad \faPhone~\href{tel:+919401787002}{(+91) 9401787002} \quad\faLinkedinIn~\href{https://linkedin.com/in/AgarwalKritik}{linkedin.com/in/AgarwalKritik} \quad\faGithub~\href{https://github.com/AgarwalKritik}{github.com/AgarwalKritik}}\\[1mm]
+\end{center}
+
+\vspace{-5mm}
+%----------------------------------------------------------------------------------------------------------
+% Objective/Professional Summary
+%----------------------------------------------------------------------------------------------------------
+\section*{Professional Summary}
+\vspace{-6pt}
+M.Tech graduate in Computer Science and Engineering from IIT Hyderabad with solid programming experience in Python and a sound understanding of software development, data-driven systems, and cybersecurity fundamentals. Experienced in building data-centric solutions and working with large structured datasets. Familiar with C/C++ and Java. Interested in designing efficient, reliable software systems with a focus on performance, scalability, and real-world impact.
+\vspace{-12pt}
+
+
+
+%----------------------------------------------------------------------------------------------------------
+% Educational Qualifications
+%----------------------------------------------------------------------------------------------------------
+\section*{Education}
+\vspace{-6pt}
+{\bf M.Tech Computer Science \& Engineering}, Indian Institute of Technology Hyderabad \hfill {Jul 2023 -- Jul 2025}\\
+CGPA: 7.69
+
+{\bf B.Tech Computer Science \& Engineering}, CMR University, Bengaluru \hfill {Aug 2019 -- Jun 2023}\\
+CGPA: 8.02
+
+{\bf 12th/Higher Secondary (CBSE) - Science}, Tinsukia English Academy \hfill {Apr 2018 -- May 2019}\\
+Percentage: 61.60\%
+
+{\bf 10th/Matriculation (CBSE)}, Tinsukia English Academy \hfill {Apr 2016 -- May 2017}\\
+CGPA: 8.0
+
+\vspace{-4pt}
+
+\vspace{-8pt}
+
+%----------------------------------------------------------------------------------------------------------
+% SKILLS
+%----------------------------------------------------------------------------------------------------------
+\section*{Skills}
+\vspace{-8pt}
+\begin{tabularx}{\linewidth}{ @{} >{\bfseries}l @{\hspace{1ex}} X }
+Programming & Python, SQL, C/C++ (basic), Java (basic) \\
+Tools \& Platforms & Git, GitHub, GitLab, Vercel, Jupyter Notebook, VS Code, Prompt Engineering for Code Generation, Excel \\
+Operating System & Linux (Debian, Ubuntu, Kali), Windows \\
+
+
+\end{tabularx}
+\vspace{-16pt}
+
+%----------------------------------------------------------------------------------------------------------
+% Thesis/Research Work
+%----------------------------------------------------------------------------------------------------------
+\section*{Work Experience}
+\vspace{-6pt}
+\textbf{Teaching Assistant} | \textit{Dept. of Computer Science \& Engineering, IIT Hyderabad} \hfill Aug 2023 -- May 2025 \\
+\vspace{-9pt}
+\begin{itemize}[leftmargin=*,itemsep=1.6mm,rightmargin=2ex]
+    \item Supported course instruction and evaluation for UG/PG programming and systems courses. \vspace{-6pt}
+    \item Assisted in assignment design, grading, and lab coordination for eight courses, including \textit{Introduction to Programming, Software Development Fundamentals, DBMS-I/II, Advanced Data Structures and Algorithms, Network Security, Linear Optimization, and Fraud Analytics.}
+\end{itemize}
+\vspace{-14pt}
+
+%----------------------------------------------------------------------------------------------------------
+% Projects
+%----------------------------------------------------------------------------------------------------------
+\section*{Projects / Research Work}
+\vspace{-8pt}
+\textbf{Synthetic Electronic Health Records Generation}: \textit{A Transformer-Based Approach} --- ~\textit{\href{https://raiith.krc.iith.ac.in/handle/123456789/63279}{\faLink~RAIITH Repository}} \hfill Jan 2024 -- Jun 2025\\
+\textit{Master's Thesis Project, IIT Hyderabad} --- \textit{Prof. Sobhan Babu Chintapalli} \\
+\vspace{-12pt}
+\begin{itemize}[leftmargin=*, itemsep=1.5mm, rightmargin=2ex]
+    \item Generated synthetic EHR data using CTGAN and a custom Transformer-Decoder model across 150+ features from \href{https://physionet.org/content/mimiciv/3.1/}{MIMIC-IV v3.1}, improving research accessibility while preserving privacy. \vspace{-8pt}
+    \item Evaluated generation quality using SDV Score (CTGAN: 0.85, Transformer: 0.50) and KS-test pass rates (89\% vs. 60\%). \vspace{-8pt}
+    \item Assessed correlation retention (CTGAN: 78\%, Transformer: 45\%) and used privacy checks like membership inference tests (less than 52\% success). \vspace{-8pt}
+    \item Found CTGAN better at structural fidelity, while the Transformer model captured rare classes with higher entropy and diversity.
+\end{itemize}
+\vspace{3pt}
+
+\textbf{Hand Cricket Game – Client-Server Model (C++)} --- \href{https://github.com/AgarwalKritik/Public/tree/9c16d3b6eb24ff6961c71bca02ae82dc4602339f/M.Tech%20%40%20IIT-Hyderabad/CS5060-Advanced%20Computer%20Networks/Socket%20Programming/Hand%20Cricket}{\faCodeBranch~GitHub} \hfill Aug 2023 -- Nov 2023 \\
+\textit{Advanced Computer Networks, IIT Hyderabad} --- \textit{Prof. Bheemarjuna Reddy Tamma} \\
+\vspace{-12pt}
+\begin{itemize}[leftmargin=*, itemsep=1.7mm, rightmargin=2ex]
+    \item Developed a real-time multiplayer hand-cricket game using TCP socket programming in C++. \vspace{-8pt}
+    \item Designed a client-server system handling real-time interaction, session state, and synchronization. \vspace{-8pt}
+    \item Implemented error handling, multi-client synchronization, and reliable bidirectional communication using TCP/IP.
+\end{itemize}
+\vspace{3pt}
+
+\textbf{Code Crusade – Capture the Flag (CTF) Challenge} --- \href{https://github.com/AgarwalKritik/Public/tree/9c16d3b6eb24ff6961c71bca02ae82dc4602339f/M.Tech%20%40%20IIT-Hyderabad/CS6903-Network%20Security/CTF%20Assignment}{\faCodeBranch~GitHub} \hfill Mar 2024 -- Apr 2024 \\
+\textit{Network Security, IIT Hyderabad} --- \textit{Prof. Bheemarjuna Reddy Tamma} \\
+\vspace{-12pt}
+\begin{itemize}[leftmargin=*, itemsep=1.7mm, rightmargin=2ex]
+    \item Participated in a competitive team-based CTF simulating real-world network attacks and system vulnerabilities. \vspace{-8pt}
+    \item Automated exploitation workflows using Python for misconfigured services. \vspace{-8pt}
+    \item Performed manual exploitation techniques including cryptographic cracking, buffer overflow, SQL injection, and Heartbleed attacks.
+\end{itemize}
+% \vspace{3pt}
+
+% \textbf{Synthetic Data Generation Using VAE} --- \href{https://github.com/AgarwalKritik/Public/blob/9c16d3b6eb24ff6961c71bca02ae82dc4602339f/M.Tech%20%40%20IIT-Hyderabad/CS6890-Fraud%20Analytics%20Using%20Predictive%20and%20Social%20Network%20Techniques/Synthetic_Data_Generation_Using_VAE.ipynb}{\faCodeBranch~GitHub} \hfill Jan 2024 -- Apr 2024 \\
+% \textit{Fraud Analytics, IIT Hyderabad} — \textit{Prof. Sobhan Babu Chintapalli} \\
+% \vspace{-12pt}
+% \begin{itemize}[leftmargin=*, itemsep=1.7mm, rightmargin=2ex]
+%     \item Designed a Variational Autoencoder (VAE) to synthesize 2 million credit card transactions with high statistical realism. \vspace{-8pt}
+%     \item Optimized model architecture with tuned latent space, normalized inputs, and reconstruction loss minimization. \vspace{-8pt}
+%     \item Evaluated output using KL divergence and achieved MSE of 0.0845; classifier accuracy: 94.93\% (train), 92.49\% (test).
+% \end{itemize}
+\vspace{-10pt}
+
+%----------------------------------------------------------------------------------------------------------
+% Scholastic Achievements
+%----------------------------------------------------------------------------------------------------------
+\section*{Achievements \& Leadership}
+\vspace{-6pt}
+\begin{itemize}[leftmargin=*, itemsep=1.7mm]
+    \item \href{https://media.licdn.com/dms/image/v2/D562DAQEzZtjEzphXrQ/profile-treasury-image-shrink_800_800/B56Zg9EgQnHcAc-/0/1753371248386?e=1753977600&v=beta&t=tc0TChhqmhRshqfp_yhZjOxoO-DvPNxqJRoR8JvjGu0}{\textbf{2\textsuperscript{nd} Winner}, NPCI AI Hackathon on Synthetic AEPS Data Fraud Detection Model Building Challenge} \hfill Jun 2024 -- Jul 2024\\
+    --- \textit{NPCI, Hyderabad}  \vspace{-8pt}
+    \item \href{https://media.licdn.com/dms/image/v2/C562DAQFOPwLOQ1bw6A/profile-treasury-document-images_1920/profile-treasury-document-images_1920/1/1676624622267?e=1754524800&v=beta&t=dvaRiypja5mWNskpH8gLm2GG8JDrqx8DkgFoEV1oamo}{\textbf{Award of Excellence} for best project in C Programming ``Quiz Game"} --- \textit{CMR University, Bengaluru} \hfill Aug 2019 -- Jan 2020 \\ \vspace{-18pt} 
+    \item \href{https://www.linkedin.com/posts/agarwalkritik_prakshepan-departmentofcse-cse-activity-7225824357875335169-4Ue1}{\textbf{Lead Organizer}, \textit{prAkshepan 2.0}, Dept. of Computer Science \& Engineering, IIT Hyderabad} \hfill Jul 2024 -- Aug 2024 \\
+\vspace{-15pt}
+\begin{itemize}[leftmargin=*, itemsep=1.5mm, rightmargin=2ex]
+     \item Led the ideation and execution of \href{https://www.linkedin.com/posts/agarwalkritik_prakshepan-departmentofcse-cse-activity-7225824357875335169-4Ue1}{\textbf{``prAkshepan 2.0"}}, an orientation initiative for M.Tech CSE freshers, improving awareness of TA/RA roles and academic workflows among 85+ participants. \vspace{-4pt}
+    \item Continued the legacy of “prAkshepan 1.0” by strengthening peer interaction, onboarding clarity, and fostering an inclusive departmental culture.
+\end{itemize}
+\end{itemize}
+\vspace{-14pt}
+
+
+\end{document}
